@@ -1,0 +1,21 @@
+extends ../layout/main
+
+block variables
+	- const pageTitle = "Sunday brunch";
+
+block content
+	.brunch-list
+		.brunch-list__promo(fullscrn="")
+			h1 It’s 12 o’clock somewhere
+			span It’s 12 o’clock somewhere – and this timely #brunchtipple is an Awfully English excuse to momentarily mislay your pocketwatch.
+			.brunch-list__bg 
+				img(src="img/brunch-list/brunch-list-bg.png", alt="")
+		.container
+			ul.brunch-list__body
+				- for(let i = 0; i < 20; i++)
+					li  
+						a(href="brunch-item.html")
+							.brunch-list__img 
+								img(src="img/brunch-list/brunch-list-bg.png", alt="") 
+							h3 Dolce&Gabbana participates in the second edition of Metaverse Fashion Week 
+	include ../blocks/pager

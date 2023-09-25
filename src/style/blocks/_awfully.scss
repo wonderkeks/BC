@@ -1,0 +1,268 @@
+.awfully {
+    h1 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        span {
+            &:first-child {
+                color: $gold;
+                font-weight: 500;
+                font-size: 80px;
+                line-height: 1em;
+                font-family: $font3;
+                width: fit-content;
+                position: relative;
+                left: -24px;
+                bottom: 1px;
+            }
+            &:last-child { 
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 46px;
+                line-height: 55px;
+                font-family: $font2;
+                width: fit-content;
+            }
+        }
+    }
+    &__subtitle {
+        width: fit-content;
+        margin: 10px auto 0 auto;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    &__descr {
+        width: 100%;
+        max-width: 820px;
+        margin: 40px auto 0 auto;
+        text-align: center;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 145%;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    &__mainImg {
+        width: 1260px;
+        height: 679px;
+        margin: 40px auto 0 auto;
+        &-mob {
+            display: none;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__imgList {
+        .swiper-wrapper {
+            display: flex;
+            gap: 64px;
+            margin-top: 40px;
+            padding-bottom: 126px;
+        }
+    }
+    &__img {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        position: relative;
+        &:nth-child(1), &:nth-child(3) {
+            width: 456px;
+            height: 456px;
+        }
+        &:nth-child(2) {
+            width: 660px;
+            height: 660px;
+            top: 126px;
+        }
+    }
+    &__pagination {
+        display: none;
+    }
+}
+
+@media (max-width: 1750px) {
+    .awfully {
+        &__mainImg {
+            width: 1020px;
+            height: 550px;
+        }
+        &__imgList {
+            .swiper-wrapper {
+                gap: 35px;
+                padding-bottom: 120px;
+            }
+        }
+        &__descr {
+            max-width: 660px;
+        }
+        &__img {
+            &:nth-child(1), &:nth-child(3) {
+                width: 380px;
+                height: 380px;
+            }
+            &:nth-child(2) {
+                width: 550px;
+                height: 550px;
+                top: 120px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1460px) {
+    .awfully {
+        &__mainImg {
+            width: 100%;
+            max-width: 1020px;
+        }
+        &__descr {
+            max-width: 690px;
+        }
+        &__imgList {
+            .swiper-wrapper {
+                gap: 20px;
+                padding-bottom: 80px;
+                justify-content: center;
+            }
+        }
+        &__img {
+            &:nth-child(1), &:nth-child(3) {
+                width: 246px;
+                height: 246px;
+            }
+            &:nth-child(2) {
+                width: 352px;
+                height: 352px;
+                top: 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .awfully {
+        .container {
+            padding: 0 20px;
+        }
+        &__imgList {
+            .swiper-wrapper {
+                margin-top: 30px;
+            }
+        }
+        &__descr {
+            max-width: 454px;
+            margin-top: 30px;
+        }
+        &__mainImg {
+            margin-top: 30px;
+        }
+        &__img {
+            &:nth-child(1), &:nth-child(3) {
+                width: calc(28% - ((40px / 3) * 2));
+                height: 197px;
+            }
+            &:nth-child(2) {
+                width: calc(44% - (40px / 3));
+                height: 294px;
+            }
+        }
+    }    
+}
+
+@media (max-width: 600px) {
+    .awfully {
+        h1 {
+            span {
+                &:first-child {
+                    font-size: 50px;
+                    left: -12px;
+                    bottom: 0;
+                    line-height: 1em;
+                }
+                &:last-child {
+                    font-size: 28px;
+                    line-height: 1em;
+                }
+            }
+        }
+        &__subtitle {
+            margin-top: 5px;
+            text-align: center;
+            font-size: 11px; 
+        }
+        &__mainImg {
+            display: none;
+            &-mob {
+                display: block;
+                width: 100%;
+                height: 250px;
+                margin-top: 30px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+        &__descr {
+            margin-top: 12px;
+            max-width: 100%;
+            width: 100%;
+            text-align: left;
+            gap: 12px;
+            font-size: 15px;
+        }
+        &__imgList {
+            margin-top: 25px;
+            width: 100%;
+            font-size: 15px;
+            .swiper-wrapper {
+                display: flex;
+                padding-bottom: 0;
+                gap: 0;
+                justify-content: start;
+                margin-top: 0;
+                .swiper-slide {
+                    width: 100%;
+                    height: 320px;
+                }
+            }
+        }
+        &__img {
+            &:nth-child(1), &:nth-child(3) {
+                width: 100%;
+                height: 100%;
+            }
+            &:nth-child(2) {
+                width: 100%;
+                height: 100%;
+                top: 0;
+            }
+        }
+        &__pagination {
+            position: relative;
+            display: block;
+            z-index: 5;
+            width: 100%;
+            margin-top: 40px;
+            background: $grey2;
+            height: 2px!important;
+            .swiper-pagination-progressbar-fill {
+                background: $black;
+            }
+        }
+    }
+}

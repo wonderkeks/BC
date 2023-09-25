@@ -1,0 +1,23 @@
+extends ../layout/main
+
+block append variables
+	- const pageTitle = "Bulletin item, v3";
+	- const bodyClass = "white";
+	//- const prevPage = {href: '', text: ''};
+	//- const pageTitle_OFF = true;
+
+block content
+	.bulletin-item.v3 
+		.bulletin-item__body 
+			.bulletin-item__text January 12, 2023
+			.bulletin-item__text 
+				p Here’s a long and lingering libation to lubricate one’s laughing gear, before enjoying a lusty luncheon.This floral, fruity and fun highball was created by the team at <a href="#" target="_blank">@bernerstavern</a> - the award winning eatery from Michelin starred chef <a href="#" target="_blank">@_jasonatherton</a>. Unclock Me combines our <a href="#" target="_blank">#awfullyenglish</a> vodka with elderflower cordial, chamomile syrup, tropical bitters and lemon juice, topped with ginger ale and garnished with redcurrants.So if you pop into this modern British tavern at the @editionlondon hotel, why not whet your appetite by asking for your favourite tipple to be made with <a href="#" target="_blank">#brokenclockvodka</a>.
+			.bulletin-item__video 
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/DMgyaBVFxpE" title="ALFRED TRAINS HARLEY QUINN || #shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			.bulletin-item__text 
+				p Here’s a long and lingering libation to lubricate one’s laughing gear, before enjoying a lusty luncheon.This floral, fruity and fun highball was created by the team at <a href="#" target="_blank">@bernerstavern</a> - the award winning eatery from Michelin starred chef <a href="#" target="_blank">@_jasonatherton</a>. Unclock Me combines our <a href="#" target="_blank">#awfullyenglish</a> vodka with elderflower cordial, chamomile syrup, tropical bitters and lemon juice, topped with ginger ale and garnished with redcurrants.So if you pop into this modern British tavern at the @editionlondon hotel, why not whet your appetite by asking for your favourite tipple to be made with <a href="#" target="_blank">#brokenclockvodka</a>.
+			.bulletin-item__wrapper 
+				img(src="img/bulletin-item/v3/img2.png", alt="").second
+				img(src="img/bulletin-item/v3/img3.png", alt="").third
+		.link-wrap(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+			a(href="bulletin.html").btn.gold back to bulletin

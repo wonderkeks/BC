@@ -1,0 +1,184 @@
+.footer {
+   padding: 60px 0 46px 0; 
+   background-color: #000000;
+   color: #FFFFFF;
+   margin-top: 140px;
+   &__body {
+        display: flex;
+        justify-content: space-between;
+        .wrapper {
+            width: 495px;
+            nav {
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    row-gap: 15px;
+                    column-gap: 136px;
+                    height: 131px;
+                    li {
+                        width: fit-content;
+                        a {
+                            opacity: 0.8;
+                            transition: opacity 0.6s;
+                            letter-spacing: 0.02em;
+                            text-transform: uppercase;
+                            font-weight: 300;
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
+                        &:last-child {
+                            display: flex;
+                            gap: 20px;
+                        }
+                    }
+                }
+            }
+        }     
+   }
+   &__bottom {
+        margin-top: 110px;
+        text-align: end;
+        span {
+            font-size: 12px;
+            line-height: 14px;
+            opacity: 0.8;
+            a {
+                position: relative;
+                &::after {
+                    content: '';
+                    width: 0%;
+                    position: absolute;
+                    height: 1px;
+                    background-color: #FFFFFF;
+                    bottom: -2px;
+                    right: 0;
+                    transition: all 0.6s;
+                    display: block;
+                }
+            }
+        }
+        .copyright {
+            margin-top: 20px;
+            font-size: 12px;
+            line-height: 14px;
+            opacity: 0.8;
+            br {
+                display: none;
+            }
+        }
+   }
+}
+
+@media (min-width: 1000px) {
+    .footer {
+        &__body {
+            .wrapper {
+                nav ul li a:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        &__bottom {
+            span {
+                a:hover {
+                    &::after {
+                        width: 100%;
+                        right: auto;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .footer {
+        .container {
+            padding: 0 20px;
+        }
+        &__body {
+            .wrapper {
+                width: 465px;
+                nav ul {
+                    column-gap: 107px
+                }
+            }
+            & > a {
+                svg {
+                    width: 190px;
+                    height: 78.235px; 
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 746px) {
+    .footer {
+        padding: 40px 0 70px 0;
+        margin-top: 80px;
+        &__body {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        .wrapper {
+            width: 100%;
+            nav {
+                ul {
+                    height: 100%;
+                    align-items: center;
+                    row-gap: 25px;
+                    li {
+                        &:nth-child(5) {
+                            margin-top: 25px;
+                        }
+                        a {
+                            opacity: 1;
+                        }
+                        img {
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+                }
+            }
+        }
+       }
+       &__bottom {
+            margin-top: 40px;
+            text-align: center;
+            .copyright {
+                width: 150px;
+                margin: 20px auto 0 auto;br {
+                    display: block;
+                }
+            }
+       }
+    }
+}
+
+.up {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .up {
+        display: block;
+        width: 45px;
+        height: 45px;
+        position: fixed;
+        bottom: 60px;
+        right: 40px;
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

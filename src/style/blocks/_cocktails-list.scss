@@ -1,0 +1,225 @@
+.cocktails-list {
+    &__promo {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        min-height: 650px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        h1 {
+            position: relative;
+            z-index: 2;
+            font-family: $font2;
+            font-weight: 400;
+            font-size: 46px;
+            line-height: 1.19em;
+            text-align: center;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+        span {
+            position: relative;
+            z-index: 2;
+            color: #FFFFFF;
+            font-size: 16px;
+            line-height: 130%;
+        }
+    }
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 37.31%, rgba(0, 0, 0, 0) 58.86%);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        img {
+            object-fit: cover;
+            object-position: top 25% left 0;
+            width: 100%;
+            height: 100%;
+            animation: zoomIn 30s linear forwards;
+        }
+    }
+    &__body {
+        margin-top: 100px;
+        ul {
+            display: flex;
+            column-gap: 60px;
+            row-gap: 80px;
+            flex-wrap: wrap;
+            li {
+                width: calc((100%/3) - 40px);
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    h2 {
+                        font-family: $font2;
+                        letter-spacing: 0.02em;
+                        text-transform: uppercase;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 125%;
+                        text-align: center;
+                        margin-top: 10px;
+                        height: 45px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -moz-box;
+                        -moz-box-orient: vertical;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        line-clamp: 2;
+                        box-orient: vertical;
+                    }                    
+                }
+            }
+        }
+    }
+    &__img {
+        width: 100%;
+        overflow: hidden;
+        img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;            
+            transition: transform 0.6s;
+        }
+    }
+    &__type {
+        text-align: center;
+        margin-top: 20px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: $gold;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        
+    }
+}
+
+@media (min-width: 1000px) {
+    .cocktails-list {
+        &__body {
+            ul li a:hover {
+                img {
+                    transition: transform 15s linear;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1760px) {
+    .cocktails-list {
+
+    }
+}
+
+@media (max-width: 1024px) {
+    .cocktails-list {
+        &__promo {
+            span {
+                max-width: 584px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        &__body {
+            margin-top: 80px;
+            ul {
+                row-gap: 77px;
+                li {
+                    width: calc(50% - 30px);
+                }
+            }
+        }        
+    }
+}
+
+@media (max-width: 800px) {
+    .cocktails-list {
+        &__promo {
+            span {
+                max-width: 455px;
+                width: 100%;
+                text-align: center;
+                font-weight: 400;
+            }
+        }
+        &__body {
+            ul {
+                row-gap: 60px;
+                column-gap: 40px;
+                li {
+                    width: calc(50% - 20px);
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 600px) {
+    .cocktails-list {
+        &__bg {
+            img {
+                object-position: left 30% top 0;
+            }
+            
+        }
+        &__promo {
+            h1 {
+                font-size: 28px;
+                letter-spacing: 0.56px;
+                text-transform: uppercase;
+                max-width: 320px;
+                text-align: center; 
+            }
+            span {
+                max-width: 320px;
+            }
+        }
+        &__body {
+            margin-top: 40px;
+            ul {
+                row-gap: 40px;
+                column-gap: 20px;
+                li {
+                    width: calc(50% - 10px);
+                    a {
+                        h2 {
+                            font-size: 14px;
+                            height: auto;
+                            max-height: 54px;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                            line-clamp: 3;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        &__type {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    }
+}

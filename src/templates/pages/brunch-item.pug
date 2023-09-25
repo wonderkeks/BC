@@ -1,0 +1,31 @@
+extends ../layout/main
+
+block append variables
+	- const pageTitle = "Brunch item";
+	- const bodyClass = "white";
+	//- const prevPage = {href: '', text: ''};
+	//- const pageTitle_OFF = true;
+
+block content
+	.brunch-item 
+		.container 
+			h1 Dolce&Gabbana Participates in the Second Edition of Metaverse Fashion Week 
+			.brunch-item__main-img 
+				img(src="img/brunch-item/brunch-item-bg.png", alt="")
+			.brunch-item__body
+				span He’s infused <a href="#" target="_blank">#brokenclockvodka</a>  with apricot blossom tea and shaken it up with a little cognac, egg white, lemon juice and dash of grenadine before topping it up for good measure with sparkling wine.
+				.brunch-item__elem 
+					.brunch-item__img 
+						img(src="img/brunch-item/item1.jpeg", alt="")
+					span 1 Michelin star executive chef <a href="#" target="_blank">@georgeblogg</a> has prepared a dish of cured Dorset char, radish, cucumber, burnet and caviar, using produce from the manor’s vast kitchen garden.It’s fittingly presented as an edible English rose and cannily compliments the complexity and elegance of Constantin’s cocktail creation.
+				.brunch-item__elem 
+					span 1 Michelin star executive chef <a href="#" target="_blank">@georgeblogg</a> has prepared a dish of cured Dorset char, radish, cucumber, burnet and caviar, using produce from the manor’s vast kitchen garden.It’s fittingly presented as an edible English rose and cannily compliments the complexity and elegance of Constantin’s cocktail creation.
+					.brunch-item__img 
+						img(src="img/brunch-item/item2.png", alt="")
+				span This rather handsome pairing has been dished up by the team at the equitably picturesque <a href="#" target="_blank">@gravetyemanor</a> in Sussex. The cocktail is the bibulous brainchild of the 16th century boutique hotel’s Bar and Lounge Manager, Constantin Grigore Panainte, who has named the drink The 12 O’Clock – making it indubitably apt for <a href="#" target="_blank">#sundaybrunch</a>.
+				.brunch-item__elem 					
+					.brunch-item__img 
+						img(src="img/brunch-item/item3.png", alt="")
+					span 1 Michelin star executive chef <a href="#" target="_blank">@georgeblogg</a> has prepared a dish of cured Dorset char, radish, cucumber, burnet and caviar, using produce from the manor’s vast kitchen garden.It’s fittingly presented as an edible English rose and cannily compliments the complexity and elegance of Constantin’s cocktail creation.
+			.link-wrap(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+				a(href="brunch-list.html").btn.gold Discover all food pairings

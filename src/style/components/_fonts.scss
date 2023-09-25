@@ -1,0 +1,68 @@
+/* Шрифты */
+
+@font-face {
+    font-family: 'Adobe Caslon Pro';
+    src: url('../fonts/ACaslonPro-Semibold.eot');
+    src: local('../Adobe Caslon Pro Semibold'), local('ACaslonPro-Semibold'),
+        url('../fonts/ACaslonPro-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ACaslonPro-Semibold.woff') format('woff'),
+        url('../fonts/ACaslonPro-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Adobe Caslon Pro';
+    src: url('../fonts/ACaslonPro-Bold.eot');
+    src: local('../Adobe Caslon Pro Bold'), local('ACaslonPro-Bold'),
+        // url('../fonts/ACaslonPro-Bold.eot?#iefix') format('embedded-opentype'),
+        // url('../fonts/ACaslonPro-Bold.woff') format('woff'),
+        // url('../fonts/ACaslonPro-Bold.ttf') format('truetype'),
+        url('../fonts/ACaslonPro-Bold.OTF') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Adobe Caslon Pro';
+    src: url('../fonts/ACaslonPro-Regular.eot');
+    src: local('../Adobe Caslon Pro Regular'), local('ACaslonPro-Regular'),
+        // url('../fonts/ACaslonPro-Regular.eot?#iefix') format('embedded-opentype'),
+        // url('../fonts/ACaslonPro-Regular.woff') format('woff'),
+        // url('../fonts/ACaslonPro-Regular.ttf') format('truetype'),
+        url('../fonts/ACaslonPro-Regular.OTF') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Egipt';
+    src: local('../fonts/CaslonsEgyptianLight'), local('Egipt'),
+        // url('../fonts/CaslonsEgyptianLight.ttf') format('truetype'),
+        url('../fonts/CaslonsEgyptianLight.OTF') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Egipt';
+    src: local('../fonts/CaslonsEgyptianRegular'), local('Egipt'),
+        // url('../fonts/CaslonsEgyptianRegular.ttf') format('truetype'),
+        url('../fonts/CaslonsEgyptianRegular.OTF') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Snell';
+    src: local('../fonts/SnellRoundhand'), local('Snell'),
+        url('../fonts/SnellRoundhand-01.ttf') format('truetype');;
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

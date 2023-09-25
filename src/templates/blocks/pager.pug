@@ -1,0 +1,11 @@
+nav.pager
+	ul
+		li.pager__item.pager__item--previous
+			a(href="#")
+
+		- for(let i = 1; i < 7; i++)
+			li.pager__item
+				a(href="", class=(i == 4 ? 'is-active' : ''))=i
+
+		li.pager__item.pager__item--next
+			a(href="#")

@@ -1,0 +1,38 @@
+extends ../layout/main
+
+block append variables
+	- const pageTitle = "Contacts";
+	- const bodyClass = "white";
+	//- const prevPage = {href: '', text: ''};
+	//- const pageTitle_OFF = true;
+
+block content
+	.contacts 
+		.container 
+			h1 It’s a pleasure to hear from you
+			form(action="#")
+				.form-item.styled
+					label(for="full-name") FULL Name*
+					input#full-name(type="text", name="")
+				.form-item.styled 
+					label(for="male") Email address*
+					input#male(type="email", name="")
+				.wrapper 
+					.form-item.styled 
+						label(for="country") Country/Region*
+						input#country(type="text", name="")
+					.form-item.styled 
+						label(for="phone") phone number*
+						input#phone(type="tel", name="")
+				.form-item.styled 
+					label(for="text") message*
+					textarea#text(name="") 
+				.form-item.req 
+					span Fields with an * are mandatory.
+				.form-item.policy 
+					span Your personal data are processed by The Hidgate LTD in order to ensure the efficient processing of your request. For more information on the processing of your data and your rights, you can consult our Privacy & Cookies Notice.
+				.form-item.agreement
+					input#agreement(type="checkbox", name="")
+					label(for="agreement") I agree to the sharing of my data affiliates for analysis purposes.
+				.form-item.submit() 
+					input(type="submit", value="SEND" data-popup="thanks").btn.gold

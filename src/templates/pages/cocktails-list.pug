@@ -1,0 +1,24 @@
+extends ../layout/main
+
+block append variables
+	- const pageTitle = "Lingering Cocktails ";
+	//- const prevPage = {href: '', text: ''};
+	//- const pageTitle_OFF = true;
+
+block content
+	section.cocktails-list__promo(fullscrn="")
+		.cocktails-list__bg 
+			img(src="img/cocktails-list/cocktails-list_bg.png", alt="")
+		h1 Lingering Cocktails 
+		span Travel through our collection of cocktails, crafted by passionate mixologists around the world
+	section.cocktails-list__body 
+		.container
+			ul 
+				each item, index in cocktails
+					li 
+						a(href="cocktail-page.html") 
+							.cocktails-list__img.ratioImg
+								img(src=`img/cocktails-list/item${index + 1}.png`, alt="")
+							.cocktails-list__type= item['type']
+							h2= item['name']
+	include ../blocks/pager

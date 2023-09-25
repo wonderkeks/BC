@@ -1,0 +1,186 @@
+.contacts  {
+    h1 {
+        font-family: $font2;
+        color: $gold;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 125%;
+        text-align: center;
+        width: 100%;
+        max-width: 624px;
+        margin: 0 auto;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 820px;
+        margin: 60px auto 0 auto;
+        .form-item {
+            &.styled {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                width: 100%;
+                input {
+                    height: 59px;
+                    border: 1px solid $grey;
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 1.18em;
+                    color: $black;
+                    padding: 20px 16px;
+                    width: 100%;
+                    transition: border-color 0.3s;
+                    &:focus {
+                        border-color: $black;
+                    }
+                }
+                textarea {
+                    width: 100%;
+                    height: 231px; 
+                    border: 1px solid $grey;
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 1.18em;
+                    color: $black;
+                    font-family: $font;
+                    padding: 20px 16px;
+                    transition: border-color 0.3s;
+                    resize: vertical;
+                    &:focus {
+                        border-color: $black;
+                        outline: none;
+                    }
+                }
+                label {
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 1.21em;
+                }
+            }
+            &.req {
+                span {
+                    color: $grey;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 1.21em;
+                }                
+            }
+            &.policy {
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 1.21em;
+                max-width: 660px;
+            }
+            &.agreement {
+                height: fit-content;
+                input {
+                    display: none;
+                    &:checked {
+                        & ~ label {
+                            &::before {
+                                content: url('../img/icons/check.svg');
+                                border-color: $black;
+                            }
+                        }
+                    }
+                }
+                label {
+                    display: flex;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 1.21em;
+                    gap: 20px;
+                    align-items: center;
+                    &::before {
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid $grey;
+                        flex-shrink: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: border-color 0.6s;
+                    }
+                }
+            }
+            &.submit {
+                display: flex;
+                justify-content: center;
+                .btn {
+                    width: 468px;
+                }
+            }
+        }
+    }
+    .wrapper {
+        display: flex;
+        gap: 60px;
+    }
+}
+
+@media (max-width: 1700px) {
+    .contacts {
+        form {
+            width: 660px;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .contacts {
+        form {
+            width: 570px;
+            .form-item {
+                &.policy {
+                    margin-top: -20px;
+                }
+                &.agreement {
+                    margin-top: -10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .contacts {
+        h1 {
+            font-size: 24px; 
+            line-height: 125%;
+            letter-spacing: 0.48px; 
+        }
+        form {
+            width: 100%;
+            margin-top: 30px;
+            gap: 25px;
+            .form-item {
+                &.styled {
+                    input {
+                        font-size: 15px;
+                        height: 50px;
+                        padding: 15px 16px;
+                    }
+                }
+                &.submit {
+                    input {
+                        width: 100%;
+                    }
+                }
+                &.policy {
+                    margin-top: -10px;
+                }
+            }
+        }
+        .wrapper {
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+}
